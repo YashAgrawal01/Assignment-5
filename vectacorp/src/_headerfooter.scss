@@ -1,0 +1,126 @@
+
+header {
+    width: inherit;
+    clear: both;
+    text-align: center;
+    padding-top: 40px;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      @include breakpoint(767px) {
+        margin-bottom: 100px;
+      }
+      @include breakpoint(459px) {
+        margin-bottom: 80px;
+      }
+    }
+  
+    h1 {
+      color: $color-red;
+      font-weight: 100;
+      font-size: 4em;
+      line-height: 0;
+      @include breakpoint(959px) {
+        font-size: 3em;
+      }
+      @include breakpoint(767px) {
+        font-size: 2em;
+      }
+      @include breakpoint(459px) {
+        &:first-child {
+          font-size: 1.4em;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    h2 {
+      color: $background-color;
+      font-weight: 900;
+      font-size: 2.5em;
+      line-height: 0;
+      margin-bottom: 70px;
+      @include breakpoint(959px) {
+        font-size: 1.5em;
+      }
+      @include breakpoint(767px) {
+        font-size: 1em;
+      }
+      @include breakpoint(459px) {
+        font-size: 1.4em;
+      }
+    }
+    h3 {
+      color: $color-grey;
+      font-weight: 400;
+      font-size: 2em;
+      line-height: 0;
+      margin-bottom: 50px;
+      @include breakpoint(767px) {
+        font-size: 1.5em;
+      }
+      @include breakpoint(459px) {
+        color: $background-color;
+        font-size: 1em;
+      }
+    }
+  }
+
+
+
+
+footer {
+    @include footer(100%, 120px, $background-color);
+    @include breakpoint(459px) {
+      text-align: center;
+    }
+  
+    p, img {
+      @include breakpoint(459px) {
+        float: none;
+        margin: 0;
+      }
+    }
+  }
+  
+  .social-media {
+    margin: 0 auto;
+    width: 165px;
+  
+    div {
+      float: left;
+      margin-right: 5px;
+    }
+  
+    a {
+      display: block;
+      width: 36px;
+      height: 36px;
+      text-indent: -9999px;
+    }
+  
+    div.one {
+      @include socialMediaIcon($social-media-image, 0, 0);
+    }
+    div.two {
+      @include socialMediaIcon($social-media-image, -38px, 0);
+    }
+    div.three {
+      @include socialMediaIcon($social-media-image, -76px, 0);
+    }
+    div.four {
+      @include socialMediaIcon($social-media-image, -114px, 0);
+    }
+  }
+  
+  .greybar {
+    width: 100%;
+    height: 90px;
+    background: $color-light-grey;
+    clear: both;
+    padding-top: 30px;
+    @include breakpoint(459px) {
+      display: none;
+    }
+  }
+

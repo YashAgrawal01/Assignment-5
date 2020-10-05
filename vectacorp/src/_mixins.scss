@@ -1,0 +1,30 @@
+@mixin footer($width: 100%, $height: 100px, $backgroundColor: $background-color) {
+    width: $width;
+    height: $height;
+    background: $color-footer;
+    text-align: center;
+    color: $background-color;
+    padding-top: 50px;
+  }
+  
+  @mixin socialMediaIcon($image, $positionX: 0, $positionY: 0) {
+    background: url($image) $positionX $positionY;
+  }
+  
+  @mixin navItem($fontSize: 1em, $marginRight: 10px) {
+      display: inline;
+      font-size: $fontSize;
+      margin-right: $marginRight;
+  }
+  
+  @mixin breakpoint($args...) {
+    @if length($args) == 1 {
+      @media screen and (max-width: nth($args, 1)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
+        @content;
+      }
+    }
+  }

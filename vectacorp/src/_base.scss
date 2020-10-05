@@ -1,0 +1,23 @@
+
+main {
+    width: 10in - 20px; // 1 inch = 96px
+    margin: 0 auto;
+    padding: 0 10px;
+    @include breakpoint(959px) {
+      width: 768px;
+    }
+    @include breakpoint(767px) {
+      width: 460px;
+    }
+    @include breakpoint(459px) {
+      width: 300px;
+    }
+  }
+  
+  body {
+    font-family: $font-body;
+    font-size: 1em;
+    line-height: 2em;
+    background: url($background-image) $background-color repeat-x;
+    margin: 0;
+  }
